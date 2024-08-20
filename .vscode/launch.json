@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "(Debug) Launch GUI",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/convert",
+      "args": [
+        "gui"
+      ],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "buildGUI",
+      "env": {
+        "LSAN_OPTIONS": "detect_leaks=0"
+      }
+    },
+    {
+      "name": "(Opt) Launch GUI",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/convert_opt",
+      "args": [
+        "gui"
+      ],
+      "stopAtEntry": true,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "buildGUI",
+      "env": {
+        "LSAN_OPTIONS": "detect_leaks=0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "version": "2.0.0",
+  "command": "bash",
+  "options": {
+    "cwd": "${workspaceRoot}"
+  },
+  "args": [
+    "-c"
+  ],
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "make"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "_id": "build",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "test",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "make check"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "_id": "test",
+        "isDefault": false
+      }
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "make clean"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "buildGUI",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "make"
+      ],
+      "problemMatcher": [],
+      "group": {
+        "_id": "build",
+        "isDefault": false
+      }
+    },
+    // {
+    //   "label": "debugMemory",
+    //   "type": "shell",
+    //   "dependsOn": [
+    //     "build"
+    //   ],
+    //   "command": "bash",
+    //   "args": [
+    //     "-c",
+    //     "valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./bin/convert_opt"
+    //   ],
+    //   "problemMatcher": []
+    // }
+  ]
+}
